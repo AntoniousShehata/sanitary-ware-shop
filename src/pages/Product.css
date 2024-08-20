@@ -15,21 +15,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Ensure it stays on top */
 }
 
 .header h1 {
   margin: 0;
   font-size: 24px;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
 }
 
 .navbar ul {
@@ -52,50 +42,36 @@ body {
   text-decoration: underline;
 }
 
-/* Hamburger Menu */
-.menu-toggle {
-  display: none; /* Hidden by default */
+.search-bar {
+  display: flex;
+  margin-top: 10px;
+}
+
+.search-bar input {
+  padding: 5px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #ff9900;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: white;
   cursor: pointer;
 }
 
-.menu-toggle img {
-  width: 24px;
-}
-
-/* Media Queries for responsive design */
-@media (max-width: 768px) {
-  .navbar ul {
-    display: none; /* Hide links by default */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #232f3e;
-    padding: 10px;
-    border-radius: 8px;
-    width: 200px;
-  }
-
-  .navbar ul.visible {
-    display: flex; /* Show links when menu is toggled */
-  }
-
-  .menu-toggle {
-    display: block; /* Show menu toggle button */
-  }
-}
-
-/* Main Content */
-.main-content {
-  margin-top: 80px; /* Space for the fixed header */
-  padding: 20px;
+.search-bar button:hover {
+  background-color: #e68a00;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 
@@ -240,4 +216,36 @@ body {
 .footer a:hover {
   color: #e68a00;
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .hero .hero-text {
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .category-item {
+    width: 100%;
+  }
+
+  .product {
+    width: 100%;
+  }
 }

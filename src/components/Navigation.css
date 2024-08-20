@@ -1,0 +1,82 @@
+/* Navigation Bar CSS */
+.header {
+  background-color: #232f3e;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed; /* Ensure it stays at the top */
+  top: 0; /* Aligns it to the top */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it is on top of other content */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar input {
+  padding: 5px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #ff9900;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: white;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #e68a00;
+}
+
+/* Make sure the menu toggle button is styled properly */
+.menu-toggle {
+  display: none; /* Hide by default, show on small screens */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Add responsive styles for the menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide menu links by default on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 0;
+    background-color: #232f3e;
+    width: 100%;
+  }
+
+  .nav-links.visible {
+    display: flex; /* Show menu links when menu is toggled */
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu toggle button on small screens */
+  }
+}
