@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navigation from './components/Navigation'; // Ensure the path is correct
+import Navigation from './components/Navigation';
 import Home from './pages/Home';
-import Product from './pages/Product';
-import About from './pages/About'; // Ensure this import matches the export in About.js
-import Contact from './pages/Contact'; // Ensure this import matches the export in Contact.js
+import Product from './pages/Product';  // Ensure this is the correct import
+import About from './pages/About';
+import Contact from './pages/Contact';
 import './App.css';
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product" element={<Product />} />  // Ensure this is correctly routed
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
