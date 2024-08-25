@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Project Name
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a web application that combines a Django backend with a React frontend. It provides functionality to view and manage store and product data through a user-friendly interface.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- View a list of stores with details.
+- Manage and view product information.
+- Built with Django for the backend and React for the frontend.
+- Static text and dynamic data updates are supported.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: React, Axios
+- **Backend**: Django, Django REST Framework
+- **Database**: SQLite (or PostgreSQL, MySQL, etc.)
+- **Development Tools**: Node.js, npm/yarn, Python
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Python (3.x)
+- Node.js (14.x or later)
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    ```
+2. Navigate to the Django project directory:
+    ```bash
+    cd your-project-directory
+    ```
+3. Create a virtual environment and activate it:
+    ```bash
+    python -m venv env
+    source env/bin/activate  # On Windows, use `env\Scripts\activate`
+    ```
+4. Install backend dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+5. Apply migrations and start the Django server:
+    ```bash
+    python manage.py migrate
+    python manage.py runserver
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend Setup
 
-### `npm run eject`
+1. Navigate to the React app directory:
+    ```bash
+    cd react-app
+    ```
+2. Install frontend dependencies:
+    ```bash
+    npm install
+    ```
+3. Build the React app:
+    ```bash
+    npm run build
+    ```
+4. Start the React development server (optional, if not served statically by Django):
+    ```bash
+    npm start
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Backend**: The Django API will be available at `http://127.0.0.1:8000/`
+- **Frontend**: The React app will be available at `http://localhost:3000/` if running in development mode. When built and served through Django, it will be available at `http://127.0.0.1:8000/`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Create a new Pull Request.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
