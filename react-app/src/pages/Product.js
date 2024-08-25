@@ -6,11 +6,11 @@ const Product = () => {
   const [stores, setStores] = useState([]);
 
   useEffect(() => {
-    // Fetch the stores from the Django API
-    fetch('/stores/')
+    // Replace '/stores/' with the full URL of your Django API
+    fetch('http://127.0.0.1:8000/stores/')
       .then(response => response.json())
       .then(data => {
-        console.log('Fetched stores:', data);  // Add this line to log fetched data
+        console.log('Fetched stores:', data);
         setStores(data);
       })
       .catch(error => console.error('Error fetching stores:', error));

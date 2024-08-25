@@ -5,6 +5,7 @@ function Contact() {
     <div>
       <h1>Contact Details</h1>
       <p>Contacts for our company.</p>
+      <p>Antonious Shehata</p>
     </div>
   );
 }
